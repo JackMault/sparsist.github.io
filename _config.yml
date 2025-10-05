@@ -1,0 +1,22 @@
+title: The Sparsist
+description: The world's first Leadership Identity Firm — offer math, narrative clarity, and 90‑day execution.
+url: https://sparsist.com
+baseurl: ""
+timezone: America/Chicago
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: /:categories/:title/
+collections:
+  articles:
+    output: true
+    permalink: /articles/:slug/
+  playbooks:
+    output: true
+    permalink: /playbooks/:slug/
+  cases:
+    output: true
+    permalink: /cases/:slug/
+exclude:
+  - README.md
+  - node_modules
