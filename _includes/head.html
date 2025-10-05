@@ -1,0 +1,31 @@
+{% assign og_image = page.og_image | default: site.url | append: '/assets/img/og-default.jpg' %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}"/>
+
+<meta property="og:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta property="og:description" content="{{ page.description | default: site.description }}" />
+<meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:image" content="{{ og_image }}" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+<meta name="twitter:image" content="{{ og_image }}" />
+
+<link rel="icon" href="/assets/img/favicon.ico" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Sparsist",
+  "url": "https://sparsist.com",
+  "sameAs": [],
+  "logo": "https://sparsist.com/assets/img/og-default.jpg",
+  "description": "The world's first Leadership Identity Firm — offer math, narrative clarity, and 90‑day execution."
+}
+</script>

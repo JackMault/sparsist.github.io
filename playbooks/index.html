@@ -1,0 +1,15 @@
+---
+layout: default
+title: Playbooks
+description: Short, sharp frameworks you can ship this week.
+---
+<h1>Playbooks</h1>
+<div class="grid">
+{% assign all = site.playbooks | sort: 'order' %}
+{% for pb in all %}
+  <div class="card">
+    <a href="{{ pb.url }}"><h3>{{ pb.title }}</h3></a>
+    <p class="sub">{{ pb.description }}</p>
+  </div>
+{% endfor %}
+</div>

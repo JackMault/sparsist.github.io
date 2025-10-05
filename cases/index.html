@@ -1,0 +1,15 @@
+---
+layout: default
+title: Proof
+description: Selected case studies. Offers, math, and narrative—working in the wild.
+---
+<h1>Proof</h1>
+<div class="grid">
+{% assign all = site.cases | sort: 'date' | reverse %}
+{% for cs in all %}
+  <div class="card">
+    <a href="{{ cs.url }}"><h3>{{ cs.title }}</h3></a>
+    <p class="sub">{{ cs.summary }}</p>
+  </div>
+{% endfor %}
+</div>

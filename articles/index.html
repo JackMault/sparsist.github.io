@@ -1,0 +1,16 @@
+---
+layout: default
+title: Articles
+description: Editorial on leadership identity, value creation, and execution.
+---
+<h1>Articles</h1>
+<div class="grid">
+{% assign all = site.articles | sort: 'date' | reverse %}
+{% for post in all %}
+  <div class="card">
+    <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+    <p class="sub">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+    <p class="fine">{{ post.date | date: "%b %d, %Y" }}</p>
+  </div>
+{% endfor %}
+</div>
